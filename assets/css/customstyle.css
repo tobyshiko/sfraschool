@@ -1,0 +1,11 @@
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 2px;
+    top:3px;
+}
+
+.hide_column {
+    display : none;
+}
