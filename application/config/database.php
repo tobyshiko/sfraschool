@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'sfraschooldb',
+	'hostname' => '127.0.0.1',
+	'username' => 'u515140698_sfra',
+	'password' => 'test',
+	'database' => 'u515140698_sfraschooldb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
