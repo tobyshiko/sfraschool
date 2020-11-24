@@ -405,11 +405,11 @@ $("#toastBasicTrigger").on("click", function(e) {
               </button>
               <button type="reset" class="btn btn-primary btn-round btn-lg btn-block mb-3">Reset</button>            
               <div class="pull-left">
-                  <h6><a href="#pablo" class="link footer-link">Forgot Password?</a></h6>
+                  <h6><a href="#" data-toggle="modal" data-target="#forgotUsernameModal"  data-dismiss="modal" class="link footer-link">Forgot Password?</a></h6>
               </div>
-              <div class="pull-right">
+              <!-- <div class="pull-right">
                  <h6><a href="#pablo" class="link footer-link">Forgot Username?</a></h6>
-              </div>
+              </div> -->
             </div>          
           </div>
         </form>
@@ -497,6 +497,43 @@ $("#toastBasicTrigger").on("click", function(e) {
             </div>
           </form>        
         </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="forgotUsernameModal" tabindex="-1" role="dialog" aria-labelledby="forgotUsernameModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="forgotUsernameModalLabel">Forgot Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">        
+        <form id="forgotUsernameForm" method="POST" action="<?php echo base_url('user/forgot_password');?>">
+          <div class="card card-plain">
+            <div class="card-body">
+              <div class="form-group col-md-12">  
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                        <i class="now-ui-icons ui-1_email-85"></i>
+                        </div>      
+                    </div>                      
+                    <input type="email" class="form-control" id="emailadd" name="emailadd" placeholder="Email Address" required="true">
+                </div>
+              </div>             
+            </div>
+            <div class="card-footer">
+              <button type="submit" name="btnForgotPassword" value="true" class="btn btn-primary btn-round btn-lg btn-block mb-3">
+                Send Email
+              </button>             
+            </div>          
+          </div>
+        </form>
       </div>      
     </div>
   </div>

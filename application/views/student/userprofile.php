@@ -20,7 +20,7 @@
             <div class="col-md-7 pl-1">
               <div class="form-group required">
                 <label class="control-label">Email Address</label>
-                <input type="text" class="form-control" name="emailaddress" value="<?php echo $row->email; ?>" disabled>
+                <input type="email" class="form-control" name="emailaddress" value="<?php echo $row->email; ?>" disabled required>
               </div>
             </div>
           </div>

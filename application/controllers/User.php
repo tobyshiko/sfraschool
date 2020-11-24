@@ -7,6 +7,7 @@ class User extends SFRA_Controller {
         parent::__construct();
         $this->load->database();
         $this->load->model('crud_model','crud');
+        $this->load->model('emailtemplate_model','emailtemplate');
         $this->crud->set_table('users');
         $this->crud->set_keyid('id');
     }
@@ -211,10 +212,19 @@ class User extends SFRA_Controller {
             $myusername = $this->session->userdata('sfra_s3ss10n_l0g')['username'];
 
             $currentpwd = sha1($this->input->post('currentpassword'));
+            $newpwd = $this->input->post('newpassword');
 
             $query = $this->crud->getResultsCriteria(array('username' => $myusername, 'password' => $currentpwd),null);
 
             if($query->num_rows() > 0){
+
+                $data = array(
+                    'password'  => sha1($newpwd),
+                    'userkey'   => $newpwd
+                );
+
+                $this->crud->update(array('username' => $myusername),$data);
+
                 echo json_encode(array("status" => TRUE,'message'=>'Password has been change!!!'));
             }else{
 
@@ -243,6 +253,43 @@ class User extends SFRA_Controller {
         $this->data['page_data'] = $query->result();
         $this->layout();
 
+    }
+
+    function forgot_password(){
+
+        if($this->input->post('btnForgotPassword')){
+            $url= $_SERVER['HTTP_REFERER'];
+            
+            $email = $this->input->post('emailadd');
+
+            $query = $this->crud->getResultsCriteria(array('email' => $email),null);
+
+            if($query->num_rows() > 0){
+                
+                $row = $query->row();
+
+                $data = array(
+                    'to'        => $email,
+                    'password'  =>  $row->userkey,
+                    'fname'     =>  $row->first_name
+                );
+
+                $this->emailtemplate->sendEmailForgotPassword($data,'forgotpassword');
+
+                //echo json_encode(array("status" => TRUE,'message'=>'Password has been change!!!'));
+                $this->session->set_flashdata('flash_message', 'Kindly check your email inbox!!!');
+                redirect($url);
+            }else{
+
+                //echo json_encode(array("status" => FALSE,'errors'=>'Email is not exists!!!'));
+                $this->session->set_flashdata('error_message', 'Email does not exists!!!');
+                redirect($url);
+
+            }
+        }else{
+            redirect(base_url());
+        }
+        
     }
 
 }

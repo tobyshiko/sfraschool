@@ -121,6 +121,7 @@ class Login extends SFRA_Controller {
                     'last_name'     => $this->input->post('lastname'),
                     'suffix'        => $this->input->post('suffix'),
                     'password'      => sha1($this->input->post('password')),
+                    'userkey'       => $this->input->post('password'),
                     'username'      => $this->input->post('username'),
                     'email'         => $useremail,
                     'userguid'      => $userguid

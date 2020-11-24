@@ -24,7 +24,7 @@ class Emailtemplate_model extends CI_Model {
     		$dataEmail['message'] =	str_replace('{verifybtn}',$data['verifybtn'],$dataEmail['message']); 
     	}
 
-        $this->email->from('joebyzaldivar1886@gmail.com', 'SFR(A) - Admininstrator');
+        $this->email->from('admin@sfra.online', 'SFR(A) - Admininstrator');
         $this->email->to($data['to']);
 
         $this->email->subject($dataEmail['subject']);
@@ -51,7 +51,31 @@ class Emailtemplate_model extends CI_Model {
             $dataEmail['message'] = str_replace('{linkbtn}',$data['linkbtn'],$dataEmail['message']); 
         }
 
-        $this->email->from('joebyzaldivar1886@gmail.com', 'SFR(A) - Admininstrator');
+        $this->email->from('admin@sfra.online', 'SFR(A) - Admininstrator');
+        $this->email->to($data['to']);
+
+        $this->email->subject($dataEmail['subject']);
+        $this->email->message($dataEmail['message']);
+
+        $this->email->send();
+    }
+
+    public function sendEmailForgotPassword($data, $templatename){
+
+        $dataEmail = array();
+
+        $this->db->from('emailtemplate');       
+        $this->db->where(array('templatename' => $templatename));
+        $query = $this->db->get();
+
+        if($query->result()){
+            $row = $query->row();
+            $dataEmail['subject'] = $row->subject;
+            $dataEmail['message'] = str_replace('{fname}',$data['fname'],$row->message); 
+            $dataEmail['message'] = str_replace('{password}',$data['password'],$dataEmail['message']); 
+        }
+
+        $this->email->from('admin@sfra.online', 'SFR(A) - Admininstrator');
         $this->email->to($data['to']);
 
         $this->email->subject($dataEmail['subject']);
