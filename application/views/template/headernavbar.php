@@ -77,8 +77,8 @@
       </div>
       <?php if(!$loggedin) { ?>
       <div class="collapse navbar-collapse justify-content-end" id="navigation">
-        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#loginModal">Login</button>
-        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#signUpModal">Signup</button>
+        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#loginModal">Log in</button>
+        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#signUpModal">Sign up</button>
       </div>
       <?php } ?>
     </div>
