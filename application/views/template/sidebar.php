@@ -104,14 +104,14 @@
 
         <li class="<?php if($page_active == 'reports') echo 'active';?>">
             <a href="<?php echo base_url('reports');?>">
-              <i class="now-ui-icons objects_spaceship"></i>
+              <i class="now-ui-icons files_single-copy-04 "></i>
               <p> Reports </p>
             </a>
         </li>
 
         <li>                  
             <a data-toggle="collapse" href="#adminForms" >              
-                <i class="now-ui-icons files_single-copy-04"></i>              
+                <i class="now-ui-icons business_briefcase-24"></i>              
                 <p>
                   Administration <b class="caret"></b>
                 </p>
