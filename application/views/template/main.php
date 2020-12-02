@@ -363,7 +363,7 @@ $("#toastBasicTrigger").on("click", function(e) {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <h5 class="modal-title" id="loginModalLabel">Log in</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -401,7 +401,7 @@ $("#toastBasicTrigger").on("click", function(e) {
             </div>
             <div class="card-footer">
               <button type="submit" class="btn btn-primary btn-round btn-lg btn-block mb-3">
-                Login
+                Log in
               </button>
               <button type="reset" class="btn btn-primary btn-round btn-lg btn-block mb-3">Reset</button>            
               <div class="pull-left">
@@ -468,7 +468,7 @@ $("#toastBasicTrigger").on("click", function(e) {
                     </div>
                     <div class="form-group col-md-6">                       
                       <select id="suffix" name="suffix" class="form-control">
-                        <option value="" selected>Suffix</option>
+                        <option value="" selected>SUFFIX</option>
                         <option>Sr</option>
                         <option>Jr</option>
                         <option>II</option>
@@ -483,7 +483,7 @@ $("#toastBasicTrigger").on("click", function(e) {
                       </select>
                     </div>                       
                     <div class="form-group col-md-12">                        
-                      <input type="email" id="useremail" name="useremail" class="form-control" placeholder="Email" required="true">
+                      <input type="email" id="useremail" name="useremail" class="form-control" placeholder="EMAIL" required="true">
                     </div>
                     <div class="form-group col-md-12">                        
                       <textarea class="form-control" onkeyup="this.value = this.value.toUpperCase()"  style="text-transform:uppercase" id="address" name="address" placeholder="Complete Address" rows="3" required="true"></textarea>
