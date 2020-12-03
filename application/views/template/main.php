@@ -76,6 +76,7 @@
   <script src="<?php echo base_url('assets/js/now-ui-dashboard.minV2.js?v=1.5.0');?>" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="<?php echo base_url('assets/demo/demo_.js');?>"></script>
   <script src="<?php echo base_url('assets/js/custom/sfra.js');?>"></script>
+  <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
    <script>
     $(document).ready(function() {
 

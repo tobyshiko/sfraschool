@@ -66,7 +66,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('login/endSession');?>">
-              <i class="now-ui-icons media-1_button-power"></i>
+              <i class="fas fa-sign-out-alt fa-2x"></i>
               <p>
                 <span class="d-lg-none d-md-block">Logout</span>
               </p>

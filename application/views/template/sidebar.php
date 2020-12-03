@@ -31,33 +31,33 @@
                 <ul class="nav">
                     <li class="<?php if($page_active == 'userprofile') echo 'active'; ?>">
                         <a href="<?php echo base_url('user/profile')?>">
-                            <i class="now-ui-icons users_single-02"></i>
+                            <i class="far fa-user"></i>
                             <span class="sidebar-normal">My Profile</span>
                         </a>
                     </li>
                     <li class="<?php if($page_active == 'notification') echo 'active'; ?>">
                         <a href="<?php echo base_url('notification')?>">
-                            <i class="now-ui-icons ui-1_bell-53"></i>
+                            <i class="far fa-bell"></i>
                             <span class="sidebar-normal">My Notifications</span>
                         </a>
                     </li>
                     <?php if($myuserRole != 'admin') { ?>
                     <li class="<?php if($page_active == 'mycourses') echo 'active'; ?>">
                         <a href="<?php echo base_url('courses/mycourses')?>">
-                            <i class="now-ui-icons education_atom"></i>
+                            <i class="fas fa-book"></i>
                             <span class="sidebar-normal">My Courses</span>
                         </a>
                     </li>
                     <?php } ?>
                     <li>
                         <a href="#" onclick="sfra.clickChangePassword()">
-                            <i class="now-ui-icons ui-1_lock-circle-open"></i>
+                            <i class="fas fa-unlock-alt"></i>
                             <span class="sidebar-normal">Change Password</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#settingsModal">
-                            <i class="now-ui-icons loader_gear"></i>
+                            <i class="fas fa-cog"></i>
                             <span class="sidebar-normal">Settings</span>
                         </a>
                     </li>
@@ -79,7 +79,7 @@
         
         <li class="<?php if($page_active == 'courses') echo 'active';?>">
             <a href="<?php echo base_url('courses');?>">
-              <i class="now-ui-icons education_atom"></i>
+              <i class="fas fa-book"></i>
               <p> Courses </p>
             </a>
         </li>
@@ -93,7 +93,7 @@
 
         <li class="<?php if($page_active == 'about') echo 'active';?>">
             <a href="<?php echo base_url('about');?>">
-              <i class="now-ui-icons travel_info"></i>
+              <i class="fas fa-info-circle"></i>
               <p> About </p>
             </a>
         </li>
@@ -104,14 +104,14 @@
 
         <li class="<?php if($page_active == 'reports') echo 'active';?>">
             <a href="<?php echo base_url('reports');?>">
-              <i class="now-ui-icons files_single-copy-04 "></i>
+              <i class="fas fa-file"></i>
               <p> Reports </p>
             </a>
         </li>
 
         <li>                  
             <a data-toggle="collapse" href="#adminForms" >              
-                <i class="now-ui-icons business_briefcase-24"></i>              
+                <i class="fas fa-briefcase"></i>         
                 <p>
                   Administration <b class="caret"></b>
                 </p>
@@ -121,32 +121,32 @@
                 <ul class="nav">                
                   <li class="<?php if($page_active == 'admincourse') echo 'active'; ?>">
                       <a href="<?php echo base_url('courses/view_list');?>">
-                          <i class="now-ui-icons education_atom"></i>
+                          <i class="fas fa-book"></i>
                           <span class="sidebar-normal"> Courses </span>
                       </a>
                   </li>                
                   <li class="<?php if($page_active == 'requirements') echo 'active'; ?>">
                       <a href="<?php echo base_url('requirements/view_list');?>">
-                          <i class="now-ui-icons files_box"></i>
+                          <i class="fas fa-archive"></i>
                           <span class="sidebar-normal"> Requirements </span>
                       </a>
                   </li> 
                   <li class="<?php if($page_active == 'coursesrequirements') echo 'active'; ?>">
                       <a href="<?php echo base_url('requirementscourses');?>">
-                          <i class="now-ui-icons design_bullet-list-67"></i>
+                          <i class="fas fa-list"></i>
                           <span class="sidebar-normal"> Requirements per Courses </span>
                       </a>
                   </li>                    
                   <li class="<?php if($page_active == 'users') echo 'active'; ?>">
                       <a href="<?php echo base_url('user');?>">
-                          <i class="now-ui-icons users_single-02"></i>
+                          <i class="fas fa-users"></i>
                           <span class="sidebar-normal"> Users </span>
                       </a>
                   </li>
                 
                   <li class="<?php if($page_active == 'emailtemplate') echo 'active'; ?>">
                       <a href="<?php echo base_url('emailtemplate'); ?>">
-                          <i class="now-ui-icons ui-1_email-85"></i>
+                          <i class="fas fa-envelope"></i>
                           <span class="sidebar-normal"> Email Template </span>
                       </a>
                   </li>
